@@ -55,31 +55,31 @@ namespace Future.Utilities.Net.Sockets
         /// <param name="buffer_manager">Segment buffer manager.</param>
         public AsyncTcpServerConfiguration(ISegmentBufferManager buffer_manager)
         {
-            BufferManager                 = buffer_manager;
+            this.BufferManager                 = buffer_manager;
 
-            ReceiveBufferSize             = 8192;
-            SendBufferSize                = 8192;
-            ReceiveTimeout                = TimeSpan.Zero;
-            SendTimeout                   = TimeSpan.Zero;
-            NoDelay                       = true;
-            LingerState                   = new LingerOption(false, 0);
-            KeepAlive                     = false;
-            KeepAliveInterval             = TimeSpan.FromSeconds(5);
-            ReuseAddress                  = false;
+            this.ReceiveBufferSize             = 8192;
+            this.SendBufferSize                = 8192;
+            this.ReceiveTimeout                = TimeSpan.Zero;
+            this.SendTimeout                   = TimeSpan.Zero;
+            this.NoDelay                       = true;
+            this.LingerState                   = new LingerOption(false, 0);
+            this.KeepAlive                     = false;
+            this.KeepAliveInterval             = TimeSpan.FromSeconds(5);
+            this.ReuseAddress                  = false;
 
-            PendingConnectionBacklog      = 200;
-            AllowNatTraversal             = true;
+            this.PendingConnectionBacklog      = 200;
+            this.AllowNatTraversal             = true;
 
-            SslEnabled                    = false;
-            SslServerCertificate          = null;
-            SslEncryptionPolicy           = EncryptionPolicy.RequireEncryption;
-            SslEnabledProtocols           = SslProtocols.None;
-            SslClientCertificateRequired  = true;
-            SslCheckCertificateRevocation = false;
-            SslPolicyErrorsBypassed       = false;
+            this.SslEnabled                    = false;
+            this.SslServerCertificate          = null;
+            this.SslEncryptionPolicy           = EncryptionPolicy.RequireEncryption;
+            this.SslEnabledProtocols           = SslProtocols.None;
+            this.SslClientCertificateRequired  = true;
+            this.SslCheckCertificateRevocation = false;
+            this.SslPolicyErrorsBypassed       = false;
 
-            ConnectTimeout                = TimeSpan.FromSeconds(15);
-            FrameBuilder                  = new LengthPrefixedFrameBuilder();
+            this.ConnectTimeout                = TimeSpan.FromSeconds(15);
+            this.FrameBuilder                  = new LengthPrefixedFrameBuilder();
         }
         #endregion
     }

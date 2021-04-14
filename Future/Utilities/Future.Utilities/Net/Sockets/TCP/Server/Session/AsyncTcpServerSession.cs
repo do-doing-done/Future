@@ -53,8 +53,8 @@ namespace Future.Utilities.Net.Sockets
 
         #region [ Properties ]
         /* Parameters */
-        public IPEndPoint RemoteEndPoint => (this.Connected ? (IPEndPoint)_tcp_client.Client.RemoteEndPoint : this._remote_end_point);
-        public IPEndPoint LocalEndPoint => (this.Connected ? (IPEndPoint)_tcp_client.Client.LocalEndPoint : this._local_end_point);
+        public IPEndPoint RemoteEndPoint => (this.Connected ? (IPEndPoint)this._tcp_client.Client.RemoteEndPoint : this._remote_end_point);
+        public IPEndPoint LocalEndPoint => (this.Connected ? (IPEndPoint)this._tcp_client.Client.LocalEndPoint : this._local_end_point);
 
         /* Server */
         public AsyncTcpServer Server => this._server;
@@ -508,9 +508,7 @@ namespace Future.Utilities.Net.Sockets
         /// </returns>
         public override string ToString()
         {
-            return $"Session Key[{this.SessionKey}], " +
-                   $"Remote End Point[{this.RemoteEndPoint}], " +
-                   $"Local End Point[{this.LocalEndPoint}]";
+            return $"<< Session Key[{this.SessionKey}], Remote End Point[{this.RemoteEndPoint}], Local End Point[{this.LocalEndPoint}] >>";
         }
         #endregion
     }

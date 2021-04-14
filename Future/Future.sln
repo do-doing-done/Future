@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Future.Utilities", "Future.Utilities\Future.Utilities.csproj", "{51948168-1AAC-4CDB-9095-107783213B24}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{3360E216-48B7-42D3-81C9-21039535A4AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Future.Utilities", "Utilities\Future.Utilities\Future.Utilities.csproj", "{51948168-1AAC-4CDB-9095-107783213B24}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities.Tests", "Utilities.Tests", "{656A1B03-4E6A-45A8-9243-E9214D4B4A81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Future.Utilities.Net.Sockets.AsyncTcpServer", "Utilities.Tests\Future.Utilities.Net.Sockets.AsyncTcpServer\Future.Utilities.Net.Sockets.AsyncTcpServer.csproj", "{1615037C-D165-400B-90E0-25244BAB46AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Future.Utilities.Tests.Net.Sockets.AsyncTcpServer", "Utilities.Tests\Future.Utilities.Net.Sockets.AsyncTcpServer\Future.Utilities.Tests.Net.Sockets.AsyncTcpServer.csproj", "{1615037C-D165-400B-90E0-25244BAB46AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Future.Utilities.Tests.Net.Sockets.AsyncTcpClient", "Utilities.Tests\Future.Utilities.Tests.Net.Sockets.AsyncTcpClient\Future.Utilities.Tests.Net.Sockets.AsyncTcpClient.csproj", "{6780B252-C853-4721-8BD6-0A96BE58F9F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Future.Utilities.Tests.Net", "Utilities.Tests\Future.Utilities.Tests.Net\Future.Utilities.Tests.Net.csproj", "{A124748F-A81C-495B-8635-5DF8937CFEAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,14 @@ Global
 		{1615037C-D165-400B-90E0-25244BAB46AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1615037C-D165-400B-90E0-25244BAB46AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1615037C-D165-400B-90E0-25244BAB46AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6780B252-C853-4721-8BD6-0A96BE58F9F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6780B252-C853-4721-8BD6-0A96BE58F9F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6780B252-C853-4721-8BD6-0A96BE58F9F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6780B252-C853-4721-8BD6-0A96BE58F9F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A124748F-A81C-495B-8635-5DF8937CFEAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A124748F-A81C-495B-8635-5DF8937CFEAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A124748F-A81C-495B-8635-5DF8937CFEAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A124748F-A81C-495B-8635-5DF8937CFEAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +44,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{51948168-1AAC-4CDB-9095-107783213B24} = {3360E216-48B7-42D3-81C9-21039535A4AD}
 		{1615037C-D165-400B-90E0-25244BAB46AB} = {656A1B03-4E6A-45A8-9243-E9214D4B4A81}
+		{6780B252-C853-4721-8BD6-0A96BE58F9F9} = {656A1B03-4E6A-45A8-9243-E9214D4B4A81}
+		{A124748F-A81C-495B-8635-5DF8937CFEAB} = {656A1B03-4E6A-45A8-9243-E9214D4B4A81}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4365C491-56C7-446C-A00F-6EB341871178}
