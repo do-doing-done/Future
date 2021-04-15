@@ -4,6 +4,12 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <StartupObject></StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="devexpress.windowsdesktop.wpf.gauges" Version="20.2.6" />
+    <PackageReference Include="devexpress.windowsdesktop.wpf.spreadsheet" Version="20.2.6" />
+  </ItemGroup>
 
 </Project>

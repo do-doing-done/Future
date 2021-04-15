@@ -1,12 +1,22 @@
-﻿<Window x:Class="Future.Utilities.Tests.Net.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Future.Utilities.Tests.Net"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:dxnav="http://schemas.devexpress.com/winfx/2008/xaml/navigation" xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:TreeList="clr-namespace:DevExpress.Data.TreeList;assembly=DevExpress.Data.Desktop.v20.2" x:Class="Future.Utilities.Tests.Net.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="768" Width="1024">
+    <Grid RenderTransformOrigin="0.498,0.511" HorizontalAlignment="Right" Width="1024">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="370*"/>
+            <RowDefinition Height="383*"/>
+        </Grid.RowDefinitions>
+        <dxg:TreeViewControl HorizontalAlignment="Left" Width="152" Height="745" VerticalAlignment="Stretch" Grid.RowSpan="2" VerticalContentAlignment="Stretch" FlowDirection="LeftToRight" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True">
+            <dxg:TreeViewControl.ColumnsSource>
+                <TreeList:SummaryDataItem/>
+            </dxg:TreeViewControl.ColumnsSource>
+        </dxg:TreeViewControl>
 
     </Grid>
 </Window>

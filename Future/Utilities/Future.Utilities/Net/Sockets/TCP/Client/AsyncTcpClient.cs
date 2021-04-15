@@ -331,7 +331,7 @@ namespace Future.Utilities.Net.Sockets
                                  : new TcpClient(this._remote_end_point.Address.AddressFamily);
                 this.SetSocketOptions();
 
-                Task awaiter = _tcp_client.ConnectAsync(this._remote_end_point.Address, this._remote_end_point.Port);
+                Task awaiter = this._tcp_client.ConnectAsync(this._remote_end_point.Address, this._remote_end_point.Port);
                 if (!awaiter.Wait(this.ConnectTimeout))
                 {
                     await this.Close(false);
@@ -408,15 +408,15 @@ namespace Future.Utilities.Net.Sockets
 
                 while (TcpConnectionState.Connected == this.State)
                 {
-                    receive_count = await _stream.ReadAsync(this._receive_buffer.Array,
-                                                            this._receive_buffer.Offset + this._receive_buffer_offset,
-                                                            this._receive_buffer.Count - this._receive_buffer_offset);
+                    receive_count = await this._stream.ReadAsync(this._receive_buffer.Array,
+                                                                 this._receive_buffer.Offset + this._receive_buffer_offset,
+                                                                 this._receive_buffer.Count - this._receive_buffer_offset);
                     if (0 < receive_count)
                     {
                         SegmentBufferDeflector.ReplaceBuffer(this._configuration.BufferManager,
-                                                     ref this._receive_buffer,
-                                                     ref this._receive_buffer_offset,
-                                                         receive_count);
+                                                         ref this._receive_buffer,
+                                                         ref this._receive_buffer_offset,
+                                                             receive_count);
                         consumed_length = 0;
                         while (true)
                         {
@@ -489,8 +489,8 @@ namespace Future.Utilities.Net.Sockets
             this._tcp_client.LingerState       = this._configuration.LingerState;
 
             if (this._configuration.KeepAlive)
-            {
-                this._tcp_client.Client.SetSocketOption(SocketOptionLevel.Socket,SocketOptionName.KeepAlive, (int)this._configuration.KeepAliveInterval.TotalMilliseconds);
+            { 
+                this._tcp_client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, (int)this._configuration.KeepAliveInterval.TotalMilliseconds);
             }
             this._tcp_client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, this._configuration.ReuseAddress);
         }
