@@ -12,4 +12,9 @@
     <PackageReference Include="devexpress.windowsdesktop.wpf.spreadsheet" Version="20.2.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Commands\" />
+  </ItemGroup>
+
 </Project>

@@ -7,16 +7,14 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:dxnav="http://schemas.devexpress.com/winfx/2008/xaml/navigation" xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:TreeList="clr-namespace:DevExpress.Data.TreeList;assembly=DevExpress.Data.Desktop.v20.2" x:Class="Future.Utilities.Tests.Net.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="768" Width="1024">
-    <Grid RenderTransformOrigin="0.498,0.511" HorizontalAlignment="Right" Width="1024">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="370*"/>
-            <RowDefinition Height="383*"/>
-        </Grid.RowDefinitions>
-        <dxg:TreeViewControl HorizontalAlignment="Left" Width="152" Height="745" VerticalAlignment="Stretch" Grid.RowSpan="2" VerticalContentAlignment="Stretch" FlowDirection="LeftToRight" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True">
-            <dxg:TreeViewControl.ColumnsSource>
-                <TreeList:SummaryDataItem/>
-            </dxg:TreeViewControl.ColumnsSource>
-        </dxg:TreeViewControl>
-
-    </Grid>
+    <dxg:TreeListControl Name="treeListControl1">
+        <dxg:TreeListControl.Columns>
+            <dxg:TreeListColumn FieldName="Name"/>
+            <dxg:TreeListColumn FieldName="Executor" ColumnFilterMode="Value">
+            </dxg:TreeListColumn>
+        </dxg:TreeListControl.Columns>
+        <dxg:TreeListControl.View>
+            <dxg:TreeListView Name="treeListView1"/>
+        </dxg:TreeListControl.View>
+    </dxg:TreeListControl>
 </Window>

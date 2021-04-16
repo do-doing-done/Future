@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 namespace Future.Utilities.Threading
 {
     /// <summary>
-    /// <see cref="Task" /> and <see cref="Task{TResult}" /> Extensions
+    /// <see cref="Task" /> and <see cref="Task{TResult}" /> Extensions.
     /// </summary>
     public static class TaskExtensions
     {
