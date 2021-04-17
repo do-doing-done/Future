@@ -1,5 +1,8 @@
 ﻿namespace Future.Utilities.Net.Sockets
 {
+    /// <summary>
+    /// Raw buffer frame builder class.
+    /// </summary>
     public sealed class RawBufferFrameBuilder : FrameBuilder
     {
         #region [ Constructor ]

@@ -48,7 +48,7 @@ namespace Future.Utilities.Net.Sockets
         private          ArraySegment<byte>             _receive_buffer        = default;
         private          int                            _receive_buffer_offset = 0;
         /* State */
-        private          int                             _state;
+        private          int                            _state;
         #endregion
 
         #region [ Properties ]
@@ -413,10 +413,8 @@ namespace Future.Utilities.Net.Sockets
                                                                  this._receive_buffer.Count - this._receive_buffer_offset);
                     if (0 < receive_count)
                     {
-                        SegmentBufferDeflector.ReplaceBuffer(this._configuration.BufferManager,
-                                                         ref this._receive_buffer,
-                                                         ref this._receive_buffer_offset,
-                                                             receive_count);
+                        this._configuration.BufferManager.ReplaceBuffer(ref this._receive_buffer, ref this._receive_buffer_offset, receive_count);
+
                         consumed_length = 0;
                         while (true)
                         {
@@ -454,10 +452,7 @@ namespace Future.Utilities.Net.Sockets
 
                         if ((null != this._receive_buffer) && (null != this._receive_buffer.Array))
                         {
-                            SegmentBufferDeflector.ShiftBuffer(this._configuration.BufferManager,
-                                                               consumed_length,
-                                                           ref this._receive_buffer,
-                                                           ref this._receive_buffer_offset);
+                            this._configuration.BufferManager.ShiftBuffer(consumed_length, ref this._receive_buffer, ref this._receive_buffer_offset);
                         }
                     }
                 }

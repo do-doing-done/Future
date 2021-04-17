@@ -75,12 +75,10 @@ namespace Future.Utilities.Net.Sockets
 
         public LineBasedFrameEncoder(LineDelimiter delimiter)
         {
-            if (delimiter == null)
-                throw new ArgumentNullException("delimiter");
-            _delimiter = delimiter;
+            this._delimiter = delimiter ?? throw new ArgumentNullException($"{nameof(delimiter)}");
         }
 
-        public LineDelimiter LineDelimiter { get { return _delimiter; } }
+        public LineDelimiter LineDelimiter { get { return this._delimiter; } }
 
         public void EncodeFrame(byte[] payload, int offset, int count, out byte[] frameBuffer, out int frameBufferOffset, out int frameBufferLength)
         {
@@ -105,9 +103,7 @@ namespace Future.Utilities.Net.Sockets
 
         public LineBasedFrameDecoder(LineDelimiter delimiter)
         {
-            if (delimiter == null)
-                throw new ArgumentNullException("delimiter");
-            _delimiter = delimiter;
+            this._delimiter = delimiter ?? throw new ArgumentNullException("delimiter");
         }
 
         public LineDelimiter LineDelimiter { get { return _delimiter; } }

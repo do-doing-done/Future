@@ -203,7 +203,7 @@ namespace Future.Utilities.Net.Sockets
                     if (receiveCount == 0)
                         break;
 
-                    SegmentBufferDeflector.ReplaceBuffer(_buffer_manager, ref _receive_buffer, ref _receive_buffer_offset, receiveCount);
+                    this._buffer_manager.ReplaceBuffer(ref _receive_buffer, ref _receive_buffer_offset, receiveCount);
                     consumedLength = 0;
 
                     while (true)
@@ -240,7 +240,7 @@ namespace Future.Utilities.Net.Sockets
 
                     if (_receive_buffer != null && _receive_buffer.Array != null)
                     {
-                        SegmentBufferDeflector.ShiftBuffer(_buffer_manager, consumedLength, ref _receive_buffer, ref _receive_buffer_offset);
+                        this._buffer_manager.ShiftBuffer(consumedLength, ref _receive_buffer, ref _receive_buffer_offset);
                     }
                 }
             }

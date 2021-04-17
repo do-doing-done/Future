@@ -3,7 +3,7 @@
 namespace Future.Utilities.Net.Sockets
 {
     /// <summary>
-    /// Buffer Validator.
+    /// Buffer validator static class.
     /// </summary>
     public static class BufferValidator
     {
