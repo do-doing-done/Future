@@ -59,8 +59,8 @@ namespace Future.Utilities.Threading
         public static async Task<TResult> WaitAsync<TResult>(this Task<TResult> task, TimeSpan timeout)
         {
             /* Check parameter. */
-            if (null == task)     throw new ArgumentNullException($"This parameter {nameof(task)} is null.");
-            if (null == timeout)  throw new ArgumentNullException($"This parameter {nameof(timeout)} is null.");
+            if (null == task)    throw new ArgumentNullException($"This parameter {nameof(task)} is null.");
+            if (null == timeout) throw new ArgumentNullException($"This parameter {nameof(timeout)} is null.");
 
             /* Check task state. */
             if (task.IsCompleted)                              return await task;

@@ -15,7 +15,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Future.Utilities.Tests.Net.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Future.Utilities.Tests.Net", "Utilities.Tests\Future.Utilities.Tests.Net\Future.Utilities.Tests.Net.csproj", "{A124748F-A81C-495B-8635-5DF8937CFEAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Future.Utilities.Tests.Net.Sockets.AsyncUdpClient", "Utilities.Tests\Future.Utilities.Tests.Net.Sockets.AsyncUdpClient\Future.Utilities.Tests.Net.Sockets.AsyncUdpClient.csproj", "{76F265F7-06FA-46DD-A7CF-EF29C85E98D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Future.Utilities.Tests.Net.Sockets.AsyncUdpClient", "Utilities.Tests\Future.Utilities.Tests.Net.Sockets.AsyncUdpClient\Future.Utilities.Tests.Net.Sockets.AsyncUdpClient.csproj", "{76F265F7-06FA-46DD-A7CF-EF29C85E98D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{D4E17055-CA46-4336-B556-120197C35721}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Future.Common.Test", "Common\Future.Common.Test\Future.Common.Test.csproj", "{65290045-E0D9-47F8-BAE1-8318684CB168}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Python", "Python", "{B97D0195-E27C-477C-8CA6-BC10E6B614E0}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Future.Python.Moutai", "Python\Future.Python.Moutai\Future.Python.Moutai.pyproj", "{53319803-B6CA-4519-B6B7-9A4D3B63B135}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +51,12 @@ Global
 		{76F265F7-06FA-46DD-A7CF-EF29C85E98D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76F265F7-06FA-46DD-A7CF-EF29C85E98D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76F265F7-06FA-46DD-A7CF-EF29C85E98D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65290045-E0D9-47F8-BAE1-8318684CB168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65290045-E0D9-47F8-BAE1-8318684CB168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65290045-E0D9-47F8-BAE1-8318684CB168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65290045-E0D9-47F8-BAE1-8318684CB168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53319803-B6CA-4519-B6B7-9A4D3B63B135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53319803-B6CA-4519-B6B7-9A4D3B63B135}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +67,8 @@ Global
 		{6780B252-C853-4721-8BD6-0A96BE58F9F9} = {656A1B03-4E6A-45A8-9243-E9214D4B4A81}
 		{A124748F-A81C-495B-8635-5DF8937CFEAB} = {656A1B03-4E6A-45A8-9243-E9214D4B4A81}
 		{76F265F7-06FA-46DD-A7CF-EF29C85E98D5} = {656A1B03-4E6A-45A8-9243-E9214D4B4A81}
+		{65290045-E0D9-47F8-BAE1-8318684CB168} = {D4E17055-CA46-4336-B556-120197C35721}
+		{53319803-B6CA-4519-B6B7-9A4D3B63B135} = {B97D0195-E27C-477C-8CA6-BC10E6B614E0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4365C491-56C7-446C-A00F-6EB341871178}
